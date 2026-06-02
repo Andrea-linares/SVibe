@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_favoritos"
+        android:title="Favoritos"
+        android:icon="@android:drawable/btn_star"/>
+
+    <item
+        android:id="@+id/nav_descargas"
+        android:title="Descargas"
+        android:icon="@android:drawable/stat_sys_download_done"/>
+
+    <item
+        android:id="@+id/nav_logros"
+        android:title="Logros"
+        android:icon="@android:drawable/ic_menu_myplaces"/>
+
+    <item
+        android:id="@+id/nav_quizz"
+        android:title="Quizz"
+        android:icon="@android:drawable/ic_menu_help"/>
+
+    <item
+        android:id="@+id/nav_sugerencias"
+        android:title="Sugerencias"
+        android:icon="@android:drawable/ic_menu_edit"/>
+
+    <item
+        android:id="@+id/nav_reporte"
+        android:title="Reporte"
+        android:icon="@android:drawable/ic_menu_info_details"/>
+
+    <item
+        android:id="@+id/nav_foro"
+        android:title="Foro"
+        android:icon="@android:drawable/ic_menu_send"/>
+
+    <item
+        android:id="@+id/nav_calendario"
+        android:title="Calendario"
+        android:icon="@android:drawable/ic_menu_month"/>
+
+    <item
+        android:id="@+id/nav_acerca"
+        android:title="Acerca de"
+        android:icon="@android:drawable/ic_menu_info_details"/>
+
+</menu>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="32dp"
+    android:background="@color/white"
+    tools:context=".auth.GuestLoginActivity">
+
+    <!-- Logo -->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="190dp"
+        android:layout_height="190dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="24dp"
+        android:src="@drawable/logo" />
+
+    <!-- Texto de bienvenida -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome_message"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:lineSpacingExtra="4dp" />
+
+    <!-- Subtexto -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome_subtitle"
+        android:textSize="14sp"
+        android:textColor="@color/gray"
+        android:gravity="center"
+        android:layout_marginTop="8dp" />
+
+    <!-- Espacio -->
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="48dp" />
+
+    <!-- Botón: Entrar como invitado -->
+    <Button
+        android:id="@+id/btnGuestLogin"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="@string/guest_login"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:backgroundTint="#2196F3" />
+
+    <!-- Espacio entre botones -->
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="16dp" />
+
+    <!-- Botón: Iniciar sesión / Registrarse -->
+    <Button
+        android:id="@+id/btnSignIn"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:backgroundTint="@color/secondary_color"
+        android:text="@string/sign_in_register"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+</LinearLayout>

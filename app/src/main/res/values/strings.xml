@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">SVibe</string>
+
+    <!-- Pantalla de invitado -->
+    <string name="logo_app">Logo de la aplicación</string>
+    <string name="welcome_message">¡Bienvenido a\nSVibe!</string>
+    <string name="welcome_subtitle">Descubre lugares ocultos y experiencias únicas</string>
+    <string name="guest_login">Entrar como invitado</string>
+    <string name="sign_in_register">Iniciar sesión / Registrarme</string>
+    <string name="guest_toast">Entrando como invitado...</string>
+    <string name="development_toast">Función en desarrollo</string>
+
+    <!-- Sidebar -->
+    <string name="open_drawer">Abrir menú</string>
+    <string name="close_drawer">Cerrar menú</string>
+
+
+</resources>

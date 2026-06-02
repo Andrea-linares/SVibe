@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F2F2F2">
+
+    <!-- TOOLBAR -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarOcultos"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#5B8DB8"
+        app:title="Lugares Ocultos"
+        app:titleTextColor="@android:color/white"
+        app:navigationIcon="@android:drawable/ic_menu_sort_by_size"/>
+
+    <!-- BUSCADOR -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:cardCornerRadius="25dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="16dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@android:drawable/ic_menu_search"/>
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Buscar..."
+                    android:textSize="14sp"
+                    android:background="@android:color/transparent"
+                    android:paddingStart="8dp"/>
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@android:drawable/ic_menu_manage"/>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <!-- FILTROS -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="12dp"
+        android:paddingBottom="10dp">
+
+        <!-- BOTON OCULTOS -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="90dp"
+            android:layout_height="35dp"
+            android:layout_marginEnd="10dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="#A9C168">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Ocultos"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:textColor="#FFFFFF"
+                android:gravity="center"/>
+        </androidx.cardview.widget.CardView>
+
+        <!-- BOTON CERCA -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="110dp"
+            android:layout_height="35dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="2dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Cerca de Mí"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:textColor="#000000"
+                android:gravity="center"/>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <!-- LISTA -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+
+            <!-- CARD 1 -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardImposible"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginBottom="14dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <!-- IMAGEN -->
+                    <ImageView
+                        android:layout_width="95dp"
+                        android:layout_height="95dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/bosqueelimposible"
+                        android:layout_gravity="center_vertical"/>
+
+                    <!-- INFO -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:paddingStart="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Bosque El Imposible"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:textColor="#000000"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Ahuachapán"
+                            android:textColor="#888888"
+                            android:textSize="14sp"
+                            android:layout_marginTop="2dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="📍 50 min / 32 km"
+                            android:textColor="#3D5A80"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            android:layout_marginTop="10dp"/>
+                    </LinearLayout>
+
+                    <!-- FAVORITO -->
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@android:drawable/btn_star_big_off"/>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <!-- CARD 2 -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardTercios"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginBottom="14dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="95dp"
+                        android:layout_height="95dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/cascadatercios"
+                        android:layout_gravity="center_vertical"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:paddingStart="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cascada Los Tercios"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:textColor="#000000"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Suchitoto"
+                            android:textColor="#888888"
+                            android:textSize="14sp"
+                            android:layout_marginTop="2dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="📍 20 min / 14 km"
+                            android:textColor="#3D5A80"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            android:layout_marginTop="10dp"/>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@android:drawable/btn_star_big_off"/>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- CARD 3 -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardComasagua"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginBottom="20dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="95dp"
+                        android:layout_height="95dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/penoncomasagua"
+                        android:layout_gravity="center_vertical"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:paddingStart="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Peñón Comasagua"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:textColor="#000000"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="La Libertad"
+                            android:textColor="#888888"
+                            android:textSize="14sp"
+                            android:layout_marginTop="2dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="📍 25 min / 20 km"
+                            android:textColor="#3D5A80"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            android:layout_marginTop="10dp"/>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@android:drawable/btn_star_big_off"/>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- CARD 4 -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardPuertaDiablo"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginBottom="14dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="95dp"
+                        android:layout_height="95dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/puertadeldiablo"
+                        android:layout_gravity="center_vertical"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:paddingStart="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Puerta del Diablo"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:textColor="#000000"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="San Salvador"
+                            android:textColor="#888888"
+                            android:textSize="14sp"
+                            android:layout_marginTop="2dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="📍 30 min / 16 km"
+                            android:textColor="#3D5A80"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            android:layout_marginTop="10dp"/>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@android:drawable/btn_star_big_off"/>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- CARD 5 -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardCalera"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginBottom="14dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="95dp"
+                        android:layout_height="95dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/chorrosdelacalera"
+                        android:layout_gravity="center_vertical"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:paddingStart="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Chorros de la Calera"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:textColor="#000000"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Juayúa"
+                            android:textColor="#888888"
+                            android:textSize="14sp"
+                            android:layout_marginTop="2dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="📍 45 min / 28 km"
+                            android:textColor="#3D5A80"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            android:layout_marginTop="10dp"/>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@android:drawable/btn_star_big_off"/>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- CARD 6 -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardLagunaVerde"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginBottom="20dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="95dp"
+                        android:layout_height="95dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/lagunaverdeapaneca"
+                        android:layout_gravity="center_vertical"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:paddingStart="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Laguna Verde"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:textColor="#000000"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Apaneca"
+                            android:textColor="#888888"
+                            android:textSize="14sp"
+                            android:layout_marginTop="2dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="📍 40 min / 24 km"
+                            android:textColor="#3D5A80"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            android:layout_marginTop="10dp"/>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@android:drawable/btn_star_big_off"/>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- BOTON -->
+            <Button
+                android:layout_width="170dp"
+                android:layout_height="45dp"
+                android:text="+ Sugerir Hito"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#A9C168"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- BOTTOM NAVIGATION -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        app:labelVisibilityMode="labeled"
+        app:itemHorizontalTranslationEnabled="false"
+        app:menu="@menu/bottom_menu"/>
+
+</LinearLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigationView"
+        android:layout_width="280dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/drawer_header"
+        app:menu="@menu/drawer_menu"/>
+
+</androidx.drawerlayout.widget.DrawerLayout>

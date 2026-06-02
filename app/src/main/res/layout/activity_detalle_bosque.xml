@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F3F3F3">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#5B8DB8"
+        app:title="Detalles"
+        app:titleTextColor="@android:color/white"
+        app:navigationIcon="@android:drawable/ic_menu_sort_by_size"/>
+
+    <!-- Scroll -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Imagen principal -->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/bosqueelimposible"/>
+
+            <!-- Contenido -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Título -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Bosque El&#10;Imposible"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:textColor="#000000"/>
+
+                <!-- Ubicación -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📍 Ahuachapán, El Salvador"
+                    android:textSize="14sp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#444444"/>
+
+                <!-- Descripción -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="El Bosque El Imposible es uno de los parques nacionales más importantes de El Salvador. Destaca por su biodiversidad, senderos naturales y espectaculares vistas montañosas."
+                    android:textSize="15sp"
+                    android:layout_marginTop="15dp"
+                    android:lineSpacingExtra="3dp"
+                    android:textColor="#333333"/>
+
+                <!-- ESTADO -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="3dp"
+                    app:cardBackgroundColor="#F1F8F1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="16dp"
+                        android:gravity="center_vertical">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:paddingStart="12dp">
+
+                            <TextView
+                                android:id="@+id/txtEstado"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Abierto hoy"
+                                android:textStyle="bold"
+                                android:textColor="#2E7D32"
+                                android:textSize="16sp"/>
+
+                            <TextView
+                                android:id="@+id/txtHoraCierre"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Cierra a las 4:00 PM"
+                                android:textColor="#555555"
+                                android:textSize="14sp"
+                                android:layout_marginTop="3dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Entrada: $6 nacionales | $10 extranjeros"
+                                android:textSize="14sp"
+                                android:layout_marginTop="5dp"
+                                android:textColor="#444444"/>
+
+                            <TextView
+                                android:id="@+id/txtMantenimiento"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Abierto al público"
+                                android:textStyle="bold"
+                                android:textSize="14sp"
+                                android:layout_marginTop="5dp"
+                                android:textColor="#2E7D32"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- HORARIOS -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="3dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="🕘 Horarios de atención"
+                            android:textStyle="bold"
+                            android:textSize="20sp"
+                            android:textColor="#000000"/>
+
+                        <!-- FILA 1 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="16dp">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Lunes a Domingo"
+                                android:textSize="15sp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="8:00 AM - 4:00 PM"
+                                android:textStyle="bold"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- Carrusel horizontal -->
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none"
+                    android:layout_marginTop="25dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <!-- CARD 1 -->
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="240dp"
+                            android:layout_height="160dp"
+                            android:layout_marginEnd="12dp"
+                            app:cardCornerRadius="16dp"
+                            app:cardElevation="5dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:padding="16dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Datos curiosos"
+                                    android:textStyle="bold"
+                                    android:textSize="18sp"
+                                    android:textColor="#000000"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="12dp"
+                                    android:text="Posee una de las mayores reservas de flora y fauna del país."
+                                    android:textSize="15sp"
+                                    android:textColor="#333333"/>
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <!-- CARD 2 -->
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="240dp"
+                            android:layout_height="160dp"
+                            android:layout_marginEnd="12dp"
+                            app:cardCornerRadius="16dp"
+                            app:cardElevation="5dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:padding="16dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Leyendas"
+                                    android:textStyle="bold"
+                                    android:textSize="18sp"
+                                    android:textColor="#000000"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="12dp"
+                                    android:text="Se dice que antiguamente era imposible cruzar sus peligrosos caminos."
+                                    android:textSize="15sp"
+                                    android:textColor="#333333"/>
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <!-- CARD 3 -->
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="240dp"
+                            android:layout_height="160dp"
+                            android:layout_marginEnd="12dp"
+                            app:cardCornerRadius="16dp"
+                            app:cardElevation="5dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:padding="16dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Eventos"
+                                    android:textStyle="bold"
+                                    android:textSize="18sp"
+                                    android:textColor="#000000"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="12dp"
+                                    android:text="Caminatas ecológicas y actividades de conservación."
+                                    android:textSize="15sp"
+                                    android:textColor="#333333"/>
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- Bottom Navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        app:menu="@menu/bottom_menu"
+        app:labelVisibilityMode="labeled"
+        app:itemHorizontalTranslationEnabled="false"/>
+
+</LinearLayout>

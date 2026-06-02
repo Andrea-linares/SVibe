@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F3F3F3">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#5B8DB8"
+        app:title="Detalles"
+        app:titleTextColor="@android:color/white"
+        app:navigationIcon="@android:drawable/ic_menu_sort_by_size"/>
+
+    <!-- Scroll -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Imagen principal -->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/teatro"/>
+
+            <!-- Contenido -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Título -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Teatro Nacional&#10;Francisco Gavidia"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:textColor="#000000"/>
+
+                <!-- Ubicación -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📍 San Miguel, El Salvador"
+                    android:textSize="14sp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#444444"/>
+
+                <!-- Descripción -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="El Teatro Nacional Francisco Gavidia es uno de los edificios culturales más importantes de San Miguel, reconocido por su arquitectura y actividades artísticas."
+                    android:textSize="15sp"
+                    android:layout_marginTop="15dp"
+                    android:lineSpacingExtra="3dp"
+                    android:textColor="#333333"/>
+
+                <!-- ESTADO -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    app:cardCornerRadius="14dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="16dp"
+                        android:gravity="center_vertical">
+
+                        <!-- Textos -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:paddingStart="12dp">
+
+                            <TextView
+                                android:id="@+id/txtEstado"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Abierto hoy"
+                                android:textStyle="bold"
+                                android:textColor="#2E7D32"
+                                android:textSize="16sp"/>
+
+                            <TextView
+                                android:id="@+id/txtHora"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Cierra a las 4:00 pm"
+                                android:textSize="13sp"
+                                android:textColor="#666666"
+                                android:layout_marginTop="4dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Entrada: desde $1"
+                                android:textSize="14sp"
+                                android:layout_marginTop="5dp"
+                                android:textColor="#444444"/>
+
+                            <TextView
+                                android:id="@+id/txtMantenimiento"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Abierto al público"
+                                android:textStyle="bold"
+                                android:textColor="#2E7D32"
+                                android:textSize="14sp"
+                                android:layout_marginTop="4dp"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- HORARIOS -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    app:cardCornerRadius="14dp"
+                    app:cardElevation="3dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Horarios de atención"
+                            android:textStyle="bold"
+                            android:textSize="20sp"
+                            android:textColor="#000000"/>
+
+                        <!-- Línea 1 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="18dp">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Lunes a viernes"
+                                android:textSize="15sp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="8:00 - 4:00"
+                                android:textSize="15sp"/>
+                        </LinearLayout>
+
+                        <!-- Línea -->
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="10dp"
+                            android:background="#DDDDDD"/>
+
+                        <!-- Línea 2 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="10dp">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Sábados y domingos"
+                                android:textSize="15sp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Cerrado"
+                                android:textStyle="bold"
+                                android:textColor="#D32F2F"
+                                android:textSize="15sp"/>
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- Carrusel -->
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none"
+                    android:layout_marginTop="25dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <!-- Datos curiosos -->
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="240dp"
+                            android:layout_height="160dp"
+                            android:layout_marginEnd="12dp"
+                            app:cardCornerRadius="16dp"
+                            app:cardElevation="5dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:padding="16dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Datos curiosos"
+                                    android:textStyle="bold"
+                                    android:textSize="18sp"
+                                    android:textColor="#000000"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="12dp"
+                                    android:text="El teatro destaca por su elegante arquitectura y valor histórico."
+                                    android:textSize="15sp"
+                                    android:textColor="#333333"/>
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <!-- Historia -->
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="240dp"
+                            android:layout_height="160dp"
+                            android:layout_marginEnd="12dp"
+                            app:cardCornerRadius="16dp"
+                            app:cardElevation="5dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:padding="16dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Historia"
+                                    android:textStyle="bold"
+                                    android:textSize="18sp"
+                                    android:textColor="#000000"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="12dp"
+                                    android:text="Ha sido escenario de importantes obras teatrales y eventos culturales."
+                                    android:textSize="15sp"
+                                    android:textColor="#333333"/>
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <!-- Eventos -->
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="240dp"
+                            android:layout_height="160dp"
+                            android:layout_marginEnd="12dp"
+                            app:cardCornerRadius="16dp"
+                            app:cardElevation="5dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:padding="16dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Eventos"
+                                    android:textStyle="bold"
+                                    android:textSize="18sp"
+                                    android:textColor="#000000"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="12dp"
+                                    android:text="Presentaciones artísticas, conciertos y obras teatrales."
+                                    android:textSize="15sp"
+                                    android:textColor="#333333"/>
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        app:menu="@menu/bottom_menu"
+        app:labelVisibilityMode="labeled"
+        app:itemHorizontalTranslationEnabled="false"/>
+
+</LinearLayout>

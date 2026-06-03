@@ -69,13 +69,17 @@
                     android:lineSpacingExtra="3dp"
                     android:textColor="#333333"/>
 
-                <!-- Estado -->
+                <!-- ESTADO -->
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/cardEstado"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    app:cardCornerRadius="14dp"
-                    app:cardElevation="2dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="3dp"
                     app:cardBackgroundColor="#F1F8F1">
 
                     <LinearLayout
@@ -110,6 +114,13 @@
                                 android:textSize="14sp"
                                 android:layout_marginTop="3dp"/>
                         </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginTop="8dp"
+                            android:src="@android:drawable/arrow_down_float"
+                            android:tint="#777777"/>
 
                     </LinearLayout>
 

@@ -7,6 +7,8 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import android.content.Intent
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import androidx.cardview.widget.CardView
+import com.google.android.material.bottomsheet.BottomSheetDialog
 
 class ParqueActivity : AppCompatActivity() {
 
@@ -17,6 +19,7 @@ class ParqueActivity : AppCompatActivity() {
 
         val txtEstado = findViewById<TextView>(R.id.txtEstado)
         val txtHora = findViewById<TextView>(R.id.txtHora)
+        val cardEstado = findViewById<CardView>(R.id.cardEstado)
 
         val bottomNav = findViewById<BottomNavigationView>(R.id.bottomNavigation)
 
@@ -70,6 +73,21 @@ class ParqueActivity : AppCompatActivity() {
         txtEstado.text = "Abierto hoy"
         txtHora.text = "Abierto las 24 horas"
 
+
+
         txtEstado.setTextColor(Color.parseColor("#2E7D32"))
+
+        cardEstado.setOnClickListener {
+
+            val dialog = BottomSheetDialog(this)
+
+            val view = layoutInflater.inflate(
+                R.layout.bottom_sheet_parque,
+                null
+            )
+
+            dialog.setContentView(view)
+            dialog.show()
+        }
     }
 }

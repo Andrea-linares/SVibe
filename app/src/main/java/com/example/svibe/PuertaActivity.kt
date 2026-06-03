@@ -5,7 +5,9 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import java.util.Calendar
 import android.content.Intent
+import androidx.cardview.widget.CardView
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.android.material.bottomsheet.BottomSheetDialog
 
 class PuertaDiabloActivity : AppCompatActivity() {
 
@@ -17,6 +19,7 @@ class PuertaDiabloActivity : AppCompatActivity() {
         val txtEstado = findViewById<TextView>(R.id.txtEstado)
         val txtHora = findViewById<TextView>(R.id.txtHoraCierre)
         val txtMantenimiento = findViewById<TextView>(R.id.txtMantenimiento)
+        val cardEstado = findViewById<CardView>(R.id.cardEstado)
 
         val bottomNav = findViewById<BottomNavigationView>(R.id.bottomNavigation)
 
@@ -84,6 +87,21 @@ class PuertaDiabloActivity : AppCompatActivity() {
             txtHora.text = "Abre mañana a las 8:00 AM"
             txtMantenimiento.text = "Fuera de horario"
 
+        }
+
+
+        // Mostrar precios al tocar la tarjeta de estado
+        cardEstado.setOnClickListener {
+
+            val dialog = BottomSheetDialog(this)
+
+            val view = layoutInflater.inflate(
+                R.layout.bottom_sheet_puerta,
+                null
+            )
+
+            dialog.setContentView(view)
+            dialog.show()
         }
     }
 }

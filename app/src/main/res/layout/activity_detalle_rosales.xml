@@ -184,7 +184,7 @@
 
                 </androidx.cardview.widget.CardView>
 
-                <!-- Carrusel horizontal -->
+                <!-- Carrusel horizontal  -->
                 <HorizontalScrollView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

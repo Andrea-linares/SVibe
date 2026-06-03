@@ -7,6 +7,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import java.util.Calendar
 import android.content.Intent
+import android.widget.Button
 import androidx.cardview.widget.CardView
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.bottomsheet.BottomSheetDialog
@@ -21,6 +22,19 @@ class TeatroActivity : AppCompatActivity() {
         val txtEstado = findViewById<TextView>(R.id.txtEstado)
         val txtHora = findViewById<TextView>(R.id.txtHora)
         val cardEstado = findViewById<CardView>(R.id.cardEstado)
+
+        val btnGaleria =
+            findViewById<Button>(R.id.btnGaleriaCompleta)
+
+        btnGaleria.setOnClickListener {
+
+            val intent =
+                Intent(this, GaleriaActivity::class.java)
+
+            intent.putExtra("lugar","teatro")
+
+            startActivity(intent)
+        }
 
 
         val bottomNav = findViewById<BottomNavigationView>(R.id.bottomNavigation)

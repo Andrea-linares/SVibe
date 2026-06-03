@@ -27,12 +27,60 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!-- Imagen principal -->
+        <!-- Imagen principal -->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
             <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="220dp"
+                android:layout_width="350dp"
+                android:layout_height="match_parent"
                 android:scaleType="centerCrop"
                 android:src="@drawable/teatro"/>
+
+            <ImageView
+                android:layout_width="350dp"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/teatro14"/>
+
+            <ImageView
+                android:layout_width="350dp"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/teatro6"/>
+
+            <ImageView
+                android:layout_width="350dp"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/teatro12"/>
+
+            <ImageView
+                android:layout_width="350dp"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/teatro4"/>
+
+            <Button
+                android:id="@+id/btnGaleriaCompleta"
+                android:layout_width="180dp"
+                android:layout_height="67dp"
+                android:layout_gravity="center"
+                android:backgroundTint="#FFFFFF"
+                android:text="Ver galería completa"
+                android:textAllCaps="false"
+                android:textColor="#1B5E20"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        </HorizontalScrollView>
 
             <!-- Contenido -->
             <LinearLayout
@@ -71,13 +119,19 @@
 
                 <!-- ESTADO -->
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/cardEstado"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="18dp"
-                    app:cardCornerRadius="14dp"
-                    app:cardElevation="2dp">
+                    android:layout_marginTop="16dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="3dp"
+                    app:cardBackgroundColor="#F1F8F1">
 
-                    <LinearLayout
+
+                <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
@@ -111,14 +165,6 @@
                                 android:layout_marginTop="4dp"/>
 
                             <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Entrada: desde $1"
-                                android:textSize="14sp"
-                                android:layout_marginTop="5dp"
-                                android:textColor="#444444"/>
-
-                            <TextView
                                 android:id="@+id/txtMantenimiento"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -129,6 +175,13 @@
                                 android:layout_marginTop="4dp"/>
 
                         </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="8dp"
+                        android:src="@android:drawable/arrow_down_float"
+                        app:tint="#777777"/>
 
                     </LinearLayout>
 

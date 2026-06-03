@@ -6,7 +6,9 @@ import android.graphics.Color
 import android.widget.TextView
 import java.util.Calendar
 import android.content.Intent
+import androidx.cardview.widget.CardView
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.android.material.bottomsheet.BottomSheetDialog
 
 class QuelepaActivity : AppCompatActivity() {
 
@@ -15,6 +17,7 @@ class QuelepaActivity : AppCompatActivity() {
         setContentView(R.layout.activity_detalle_quelepa)
         val txtEstado = findViewById<TextView>(R.id.txtEstado)
         val txtHoraCierre = findViewById<TextView>(R.id.txtHoraCierre)
+        val cardEstado = findViewById<CardView>(R.id.cardEstado)
 
         val bottomNav = findViewById<BottomNavigationView>(R.id.bottomNavigation)
 
@@ -80,6 +83,21 @@ class QuelepaActivity : AppCompatActivity() {
             txtEstado.setTextColor(Color.RED)
 
             txtHoraCierre.text = "Abre mañana a las 9:00 am"
+        }
+
+
+        // Mostrar precios al tocar la tarjeta de estado
+        cardEstado.setOnClickListener {
+
+            val dialog = BottomSheetDialog(this)
+
+            val view = layoutInflater.inflate(
+                R.layout.bottom_sheet_quelepa,
+                null
+            )
+
+            dialog.setContentView(view)
+            dialog.show()
         }
     }
 }

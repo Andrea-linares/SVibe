@@ -1,6 +1,8 @@
 package com.example.svibe
 
+import android.graphics.Color
 import android.os.Bundle
+import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import java.util.Calendar
@@ -97,7 +99,6 @@ class TeatroActivity : AppCompatActivity() {
             txtHora.text = "Abrirá mañana"
 
         }
-
 
         // Mostrar precios al tocar la tarjeta de estado
         cardEstado.setOnClickListener {

@@ -11,6 +11,8 @@ import android.widget.Button
 import androidx.cardview.widget.CardView
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.bottomsheet.BottomSheetDialog
+import android.app.Dialog
+import android.widget.ImageView
 
 class TeatroActivity : AppCompatActivity() {
 
@@ -22,6 +24,7 @@ class TeatroActivity : AppCompatActivity() {
         val txtEstado = findViewById<TextView>(R.id.txtEstado)
         val txtHora = findViewById<TextView>(R.id.txtHora)
         val cardEstado = findViewById<CardView>(R.id.cardEstado)
+        val btnLeyendaTeatro = findViewById<Button>(R.id.btnLeyendaTeatro)
 
         val btnGaleria =
             findViewById<Button>(R.id.btnGaleriaCompleta)
@@ -126,6 +129,42 @@ class TeatroActivity : AppCompatActivity() {
 
             dialog.setContentView(view)
             dialog.show()
+        }
+
+        btnLeyendaTeatro.setOnClickListener {
+
+            val dialog = Dialog(this)
+
+            dialog.setContentView(R.layout.dialog_leyenda)
+
+            dialog.window?.setBackgroundDrawableResource(
+                android.R.color.transparent
+            )
+
+            val imgLeyenda =
+                dialog.findViewById<ImageView>(R.id.imgLeyenda)
+
+            val txtTituloLeyenda =
+                dialog.findViewById<TextView>(R.id.txtTituloLeyenda)
+
+            val txtDescripcionLeyenda =
+                dialog.findViewById<TextView>(R.id.txtDescripcionLeyenda)
+
+            imgLeyenda.setImageResource(R.drawable.teatro)
+
+            txtTituloLeyenda.text = "Leyenda"
+
+            txtTituloLeyenda.text = "Leyenda"
+
+            txtDescripcionLeyenda.text =
+                "Una de las historias más conocidas sobre el Teatro Nacional Francisco Gavidia cuenta que, durante las noches silenciosas, algunas personas han escuchado pasos y murmullos provenientes del escenario principal cuando el edificio se encuentra vacío. Según la tradición popular, estos sonidos pertenecerían a antiguos artistas que dedicaron su vida al teatro y cuya pasión permanece entre los pasillos y camerinos del recinto."
+
+            dialog.show()
+
+            dialog.window?.setLayout(
+                (resources.displayMetrics.widthPixels * 0.90).toInt(),
+                android.view.ViewGroup.LayoutParams.WRAP_CONTENT
+            )
         }
     }
 }

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@drawable/dialog_bg"
+    android:elevation="10dp">
+
+    <ImageView
+        android:id="@+id/imgLeyenda"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ruinasquelepa"/>
+
+    <TextView
+        android:id="@+id/txtTituloLeyenda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Leyenda"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:textColor="#000000"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/txtDescripcionLeyenda"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="#444444"
+        android:layout_marginTop="12dp"/>
+
+</LinearLayout>

@@ -311,7 +311,7 @@
 
                         </androidx.cardview.widget.CardView>
 
-                        <!-- Historia -->
+                        <!-- Leyenda -->
                         <androidx.cardview.widget.CardView
                             android:layout_width="240dp"
                             android:layout_height="160dp"
@@ -328,18 +328,20 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Historia"
+                                    android:text="Leyenda"
                                     android:textStyle="bold"
                                     android:textSize="18sp"
                                     android:textColor="#000000"/>
 
-                                <TextView
+                                <Button
+                                    android:id="@+id/btnLeyendaTeatro"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginTop="12dp"
-                                    android:text="Ha sido escenario de importantes obras teatrales y eventos culturales."
-                                    android:textSize="15sp"
-                                    android:textColor="#333333"/>
+                                    android:text="Leer más"
+                                    android:textAllCaps="false"
+                                    android:backgroundTint="#5B8DB8"
+                                    android:textColor="@android:color/white"
+                                    android:layout_marginTop="16dp"/>
 
                             </LinearLayout>
 

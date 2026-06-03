@@ -8,6 +8,9 @@ import android.content.Intent
 import androidx.cardview.widget.CardView
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.bottomsheet.BottomSheetDialog
+import android.app.Dialog
+import android.widget.Button
+import android.widget.ImageView
 class MuseoActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,6 +21,7 @@ class MuseoActivity : AppCompatActivity() {
         val txtEstado = findViewById<TextView>(R.id.txtEstado)
         val txtHora = findViewById<TextView>(R.id.txtHora)
         val cardEstado = findViewById<CardView>(R.id.cardEstado)
+        val btnLeyendaMuseo = findViewById<Button>(R.id.btnLeyendaMuseo)
 
 
         val bottomNav = findViewById<BottomNavigationView>(R.id.bottomNavigation)
@@ -91,6 +95,42 @@ class MuseoActivity : AppCompatActivity() {
 
             dialog.setContentView(view)
             dialog.show()
+        }
+
+        btnLeyendaMuseo.setOnClickListener {
+
+            val dialog = Dialog(this)
+
+            dialog.setContentView(R.layout.dialog_leyenda)
+
+            dialog.window?.setBackgroundDrawableResource(
+                android.R.color.transparent
+            )
+
+            val imgDialog =
+                dialog.findViewById<ImageView>(R.id.imgLeyenda)
+
+            val txtTitulo =
+                dialog.findViewById<TextView>(R.id.txtTituloLeyenda)
+
+            val txtDescripcion =
+                dialog.findViewById<TextView>(R.id.txtDescripcionLeyenda)
+
+            imgDialog.setImageResource(R.drawable.museo)
+
+            imgDialog.setImageResource(R.drawable.museo)
+
+            txtTitulo.text = "Leyenda"
+
+            txtDescripcion.text =
+                "Existe la creencia popular de que los espíritus de antiguos pobladores protegen las piezas arqueológicas del museo y se manifiestan mediante extraños sonidos durante la noche. La leyenda cuenta que estos guardianes vigilan las reliquias históricas para evitar que sean dañadas o retiradas de su lugar."
+
+            dialog.show()
+
+            dialog.window?.setLayout(
+                (resources.displayMetrics.widthPixels * 0.90).toInt(),
+                android.view.ViewGroup.LayoutParams.WRAP_CONTENT
+            )
         }
     }
 }

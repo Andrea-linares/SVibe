@@ -279,8 +279,9 @@
 
                         <!-- Datos curiosos -->
                         <androidx.cardview.widget.CardView
+                            android:id="@+id/cardDatos"
                             android:layout_width="240dp"
-                            android:layout_height="160dp"
+                            android:layout_height="wrap_content"
                             android:layout_marginEnd="12dp"
                             app:cardCornerRadius="16dp"
                             app:cardElevation="5dp">
@@ -299,13 +300,15 @@
                                     android:textSize="18sp"
                                     android:textColor="#000000"/>
 
-                                <TextView
+                                <Button
+                                    android:id="@+id/btnLeerMas"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginTop="12dp"
-                                    android:text="El teatro destaca por su elegante arquitectura y valor histórico."
-                                    android:textSize="15sp"
-                                    android:textColor="#333333"/>
+                                    android:text="Leer más"
+                                    android:textAllCaps="false"
+                                    android:backgroundTint="#5B8DB8"
+                                    android:textColor="@android:color/white"
+                                    android:layout_marginTop="16dp"/>
 
                             </LinearLayout>
 
@@ -314,7 +317,7 @@
                         <!-- Leyenda -->
                         <androidx.cardview.widget.CardView
                             android:layout_width="240dp"
-                            android:layout_height="160dp"
+                            android:layout_height="wrap_content"
                             android:layout_marginEnd="12dp"
                             app:cardCornerRadius="16dp"
                             app:cardElevation="5dp">

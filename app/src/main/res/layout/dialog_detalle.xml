@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@drawable/dialog_bg">
+
+    <!-- IMAGEN -->
+    <ImageView
+        android:id="@+id/imgDialog"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/catedral"/>
+
+    <!-- DESCRIPCIÓN -->
+    <TextView
+        android:id="@+id/txtDescripcionDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Aquí irá el dato curioso..."
+        android:textSize="16sp"
+        android:textColor="#444"
+        android:layout_marginTop="12dp"/>
+
+</LinearLayout>

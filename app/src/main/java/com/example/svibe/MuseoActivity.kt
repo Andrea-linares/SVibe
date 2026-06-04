@@ -96,6 +96,35 @@ class MuseoActivity : AppCompatActivity() {
             dialog.setContentView(view)
             dialog.show()
         }
+        val btnLeerMas = findViewById<Button>(R.id.btnLeerMas)
+
+        btnLeerMas.setOnClickListener {
+
+            val dialog = Dialog(this)
+            dialog.setContentView(R.layout.dialog_detalle)
+            dialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
+
+            // IMAGEN
+            val imgDialog = dialog.findViewById<ImageView>(R.id.imgDialog)
+
+            // TITULO
+
+            // DESCRIPCION
+            val txtDescripcion = dialog.findViewById<TextView>(R.id.txtDescripcionDialog)
+
+            // DATOS
+            imgDialog.setImageResource(R.drawable.museod)
+
+            txtDescripcion.text = "El Museo contiene colecciones arqueológicas y culturales del oriente salvadoreño."
+
+            dialog.show()
+
+            // HACERLO MÁS ANCHO
+            dialog.window?.setLayout(
+                (resources.displayMetrics.widthPixels * 0.90).toInt(),
+                android.view.ViewGroup.LayoutParams.WRAP_CONTENT
+            )
+        }
 
         btnLeyendaMuseo.setOnClickListener {
 
@@ -118,8 +147,6 @@ class MuseoActivity : AppCompatActivity() {
 
             imgDialog.setImageResource(R.drawable.museo)
 
-            imgDialog.setImageResource(R.drawable.museo)
-
             txtTitulo.text = "Leyenda"
 
             txtDescripcion.text =
@@ -131,6 +158,7 @@ class MuseoActivity : AppCompatActivity() {
                 (resources.displayMetrics.widthPixels * 0.90).toInt(),
                 android.view.ViewGroup.LayoutParams.WRAP_CONTENT
             )
+
         }
     }
 }

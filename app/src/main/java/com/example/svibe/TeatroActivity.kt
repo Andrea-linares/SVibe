@@ -130,6 +130,34 @@ class TeatroActivity : AppCompatActivity() {
             dialog.setContentView(view)
             dialog.show()
         }
+        val btnLeerMas = findViewById<Button>(R.id.btnLeerMas)
+
+        btnLeerMas.setOnClickListener {
+
+            val dialog = Dialog(this)
+            dialog.setContentView(R.layout.dialog_detalle)
+            dialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
+
+            // IMAGEN
+            val imgDialog = dialog.findViewById<ImageView>(R.id.imgDialog)
+
+            // DESCRIPCION
+            val txtDescripcion = dialog.findViewById<TextView>(R.id.txtDescripcionDialog)
+
+            // DATOS
+            imgDialog.setImageResource(R.drawable.teatro4)
+
+
+            txtDescripcion.text = "El teatro destaca por su elegante arquitectura y valor histórico."
+
+            dialog.show()
+
+            // HACERLO MÁS ANCHO
+            dialog.window?.setLayout(
+                (resources.displayMetrics.widthPixels * 0.90).toInt(),
+                android.view.ViewGroup.LayoutParams.WRAP_CONTENT
+            )
+        }
 
         btnLeyendaTeatro.setOnClickListener {
 

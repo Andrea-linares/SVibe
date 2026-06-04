@@ -145,12 +145,12 @@ class MuseoActivity : AppCompatActivity() {
             val txtDescripcion =
                 dialog.findViewById<TextView>(R.id.txtDescripcionLeyenda)
 
-            imgDialog.setImageResource(R.drawable.museo)
+            imgDialog.setImageResource(R.drawable.museoley)
 
             txtTitulo.text = "Leyenda"
 
             txtDescripcion.text =
-                "Existe la creencia popular de que los espíritus de antiguos pobladores protegen las piezas arqueológicas del museo y se manifiestan mediante extraños sonidos durante la noche. La leyenda cuenta que estos guardianes vigilan las reliquias históricas para evitar que sean dañadas o retiradas de su lugar."
+                "Existe la creencia popular de que los espíritus de antiguos pobladores protegen las piezas arqueológicas del museo y se manifiestan mediante extraños sonidos durante la noche."
 
             dialog.show()
 

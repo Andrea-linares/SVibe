@@ -340,7 +340,7 @@
                                     android:id="@+id/btnLeyendaTeatro"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Leer más"
+                                    android:text="Explorar Leyenda"
                                     android:textAllCaps="false"
                                     android:backgroundTint="#5B8DB8"
                                     android:textColor="@android:color/white"

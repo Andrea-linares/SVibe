@@ -178,14 +178,14 @@ class TeatroActivity : AppCompatActivity() {
             val txtDescripcionLeyenda =
                 dialog.findViewById<TextView>(R.id.txtDescripcionLeyenda)
 
-            imgLeyenda.setImageResource(R.drawable.teatro)
+            imgLeyenda.setImageResource(R.drawable.teatroley)
 
             txtTituloLeyenda.text = "Leyenda"
 
             txtTituloLeyenda.text = "Leyenda"
 
             txtDescripcionLeyenda.text =
-                "Una de las historias más conocidas sobre el Teatro Nacional Francisco Gavidia cuenta que, durante las noches silenciosas, algunas personas han escuchado pasos y murmullos provenientes del escenario principal cuando el edificio se encuentra vacío. Según la tradición popular, estos sonidos pertenecerían a antiguos artistas que dedicaron su vida al teatro y cuya pasión permanece entre los pasillos y camerinos del recinto."
+                "La leyenda cuenta que por las noches se escuchan pasos y murmullos en el teatro. Según la tradición, serían antiguos artistas que aún permanecen ligados a este lugar."
 
             dialog.show()
 
